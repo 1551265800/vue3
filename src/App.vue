@@ -33,6 +33,11 @@ export default {
       this.data = data;
     }
   },
+  provide() {
+    return {
+      key: value
+    }
+  },
 }
 </script>
 
