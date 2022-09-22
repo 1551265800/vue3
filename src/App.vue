@@ -1,7 +1,8 @@
 <template>
   <div>
     <h3>{{key}}</h3>
-    <HelloWord> </HelloWord>
+    <HelloWord :onFnEvent="setmsg"></HelloWord>
+    <h3>{{data}}</h3>
   </div>
 </template>
 
@@ -10,11 +11,17 @@
 export default {
   data() {
     return {
-      key: 1433223
+      key: 1433223,
+      data:""
     }
   },
   components: {
     HelloWord,
+  },
+  methods: {
+    setmsg(data) {
+      this.data = data;
+    }
   },
 }
 </script>
