@@ -11,11 +11,14 @@
     </SlotsBase>
   </div> -->
   <component :is="tabConponents" :onFnEvent="setmsg"></component>
+  <Composition></Composition>
+  <p v-author>自定义指令</p>
 </template>
 
 <script>
 import HelloWord from './components/HelloWord.vue'
 import SlotsBase from './components/SlotsBase.vue';
+import Composition from '@/components/Composition.vue';
 export default {
   data() {
     return {
@@ -26,18 +29,24 @@ export default {
   },
   components: {
     HelloWord,
-    SlotsBase
+    SlotsBase,
+    Composition
+  },
+  //自定义指令
+  directives:{
+    author:{
+      mounted(el){
+        //当前元素
+        console.log(el);
+        el.innerHTML = el.innerHTML + "-swz"
+      }
+    }
   },
   methods: {
     setmsg(data) {
       this.data = data;
     }
-  },
-  provide() {
-    return {
-      key: value
-    }
-  },
+  }
 }
 </script>
 
