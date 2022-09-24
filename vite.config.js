@@ -10,5 +10,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server:{
+    proxy: {
+      '^/api': {
+       target: 'http://iwenwiki.com', // 后端服务实际地址
+       changeOrigin: true, //开启代理
+       rewrite: (path) => path.replace(/^\/api/, '')
+       }
+      }
   }
 })
