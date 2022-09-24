@@ -10,17 +10,18 @@
       </div>
     </SlotsBase>
   </div> -->
-  <component :is="tabConponents" :onFnEvent="setmsg"></component>
+  <!-- <component :is="tabConponents" :onFnEvent="setmsg"></component>
   <Composition></Composition>
   <p v-author>自定义指令</p>
   <Transition1></Transition1>
   <div>
     {{info}}
-    <!-- <div v-for="(item,index) of info" :key="index">
+    <div v-for="(item,index) of info" :key="index">
       <h3>{{ item.title }}</h3>
       <p>{{ item.content }}</p>
-    </div> -->
-  </div>
+    </div>
+  </div> -->
+
 </template>
 
 <script>

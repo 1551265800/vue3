@@ -10,7 +10,8 @@
     "axios": "^0.27.2",
     "less": "^4.1.3",
     "querystring": "^0.2.1",
-    "vue": "^3.2.38"
+    "vue": "^3.2.38",
+    "vue-router": "next"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
