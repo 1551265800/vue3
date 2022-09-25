@@ -5,7 +5,7 @@ import NewApp from './NewAPP.vue'
 import Home from './views/home.vue';
 import About from './views/about.vue';
 /* import './assets/main.css' */
-//路由配置 放入页面配置
+/* //路由配置 放入页面配置
 const routes = [
     {
         path: "/",
@@ -20,9 +20,9 @@ import { createRouter, createWebHashHistory } from "vue-router"
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
-})
-
+}) */
+import {router} from './utils/myRouter'
 const app = createApp(NewApp)
 app.config.globalProperties.axios = axios;
-app.use(router);
+app.use(router); 
 app.mount('#app')
