@@ -1,7 +1,4 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+
 
 <template>
   <header>
@@ -13,6 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+
       </nav>
     </div>
   </header>
@@ -20,6 +18,12 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
+<script setup>
+import { RouterLink, RouterView} from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
+
+
+</script>
 <style scoped>
 header {
   line-height: 1.5;
