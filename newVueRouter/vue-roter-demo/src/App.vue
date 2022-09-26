@@ -15,7 +15,11 @@
     </div>
   </header>
 
-  <RouterView />
+  <RouterView v-slot="{Component}">
+      <Transition name="fade">
+        <component :is="Component"></component>
+      </Transition>
+  </RouterView>
 </template>
 
 <script setup>
@@ -59,6 +63,16 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
+.fade-enter-active {
+  transition: all 0.5s ease-in-out;
+}
+.fade-enter-from{
+  opacity: 0;
+}
+.fade-enter-to{
+  opacity: 1;
+}
+
 
 @media (min-width: 1024px) {
   header {
@@ -86,4 +100,6 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+
+
 </style>
